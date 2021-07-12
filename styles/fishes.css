@@ -1,0 +1,26 @@
+.fishTitle {
+    text-align: center;
+}
+
+.fishList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: lightblue;
+}
+
+.fishList li {
+    flex-basis: 16%;
+    list-style-type: none;
+}
+
+.fishImg {
+    max-height: 8rem;
+    max-width: 13rem;
+}
+
+.fish-animation:hover {
+    background-color: coral;
+    transition: all ease-in-out 1s;
+}
