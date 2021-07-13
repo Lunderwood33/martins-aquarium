@@ -1,22 +1,178 @@
 
 
 .location {
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .location li {
     list-style: none;
+    flex-basis: 16%;
 }
 
-.location-animation {
-
+.link {
+    padding: 15px 30px;
+	margin: 10px;
+	display: inline-block;
+	color: #000;
+	background: goldenrod;
+  text-decoration: none;
 }
 
 .location-animation:hover {
-
+    text-decoration: none;
+	color: #000;
 }
+
+/*====================*/
+/* BUZZ OUT
+/*====================*/
+
+@-webkit-keyframes buzz-out-on-hover {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes buzz-out-on-hover {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.buzz-out-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.buzz-out-on-hover:hover, .buzz-out-on-hover:focus, .buzz-out-on-hover:active {
+  -webkit-animation-name: buzz-out-on-hover;
+  animation-name: buzz-out-on-hover;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
 
 .locationImg {
     max-height: 8rem;
     max-width: 13rem;
+}
+
+.location-sliding-u-l-r-l{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+    color: white;
+    margin-left: 3rem;
+}
+.location-sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+.location-sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    background: goldenrod;
+    transition: width .5s ease;
+}
+.location-sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background: #ff33ee;
+    transition: width .5s ease;
+}
+.location-sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
 }
