@@ -1,0 +1,22 @@
+
+
+.location {
+
+}
+
+.location li {
+    list-style: none;
+}
+
+.location-animation {
+
+}
+
+.location-animation:hover {
+
+}
+
+.locationImg {
+    max-height: 8rem;
+    max-width: 13rem;
+}
